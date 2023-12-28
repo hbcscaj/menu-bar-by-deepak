@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*  styling nav */
+nav {
+    background-color: #24262A;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+}
+
+/* styling nav end */
+
+/*  adjusting nav items in nav-bar */
+label {
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.name {
+    position: absolute;
+    left: 50px
+}
+
+/* adjust nav items  end  */
+
+
+
+
+/* logo styling  and name start*/
+.logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0d40A6;
+    position: relative;
+    left: 6px;
+}
+
+.logo-item {
+    position: absolute;
+    top: 5.4px;
+    left: 9px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.name {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+/* logo styling and name end */
+
+
+/* ul adjustment-styling */
+ul {
+    background-color: #24262A;
+    padding-top: 10px;
+    list-style: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 40px;
+    right: -1400px;
+}
+
+/* ul adjustment-end */
+
+
+/* adjusting ul li start */
+ul li {
+    margin-top: 3px;
+    margin-left: 12px;
+}
+
+/*  adjusting ul li end */
+
+/* styling links  start */
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a:hover {
+    color: #4a4c4e;
+}
+
+/* styling links end */
+
+
+
+/* making menu-bar lines  start */
+.hot {
+    width: 20px;
+    height: 3px;
+    background-color: #4a4c4e;
+}
+
+.got {
+    width: 20px;
+    height: 3px;
+    background-color: #4a4c4e;
+    margin-top: 3px;
+}
+
+.cot {
+    width: 20px;
+    height: 3px;
+    background-color: #4a4c4e;
+    margin-top: 3px;
+
+}
+
+/* menu-bar lines end */
+
+/* menu-clicking start */
+/* cross mark creation start */
+
+input:checked+label>.hot {
+
+    transform: rotate(45deg) translateY(8px);
+    transition: all 1s;
+
+}
+
+input:checked+label>.hot+.got {
+    opacity: 0;
+    transition: all 1s;
+}
+
+input:checked+label>.hot+.got+.cot {
+    transform: rotate(-45deg) translateY(-8px);
+    transition: all 1s;
+
+}
+
+/* cross marks creation end */
+
+/* ul handling on click  */
+
+
+input:checked+label~ul {
+    right: 0px;
+    transition: all 1s;
+}
+
+/* menu-clicking  end */
+
+
+
+
+/* hiding overflow in x-directio */
+html,body {
+min-height: 100vh;
+width: 100vw;
+    overflow-x: hidden;
+}
